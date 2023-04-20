@@ -41,22 +41,5 @@ public class BankTransactionApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-
-		Customer customer_ARDA = new Customer("Arda", "Kılıç", new HashSet<>());
-		Customer customer_BERFIN = new Customer("Berfin", "Kılıç", new HashSet<>());
-
-		Transaction transaction_ONE = new Transaction(new BigDecimal("234.32"), customer_ARDA);
-		Transaction transaction_TWO = new Transaction(new BigDecimal("123.87"), customer_ARDA);
-		Transaction transaction_THREE = new Transaction(new BigDecimal("234.32"), customer_BERFIN);
-		Transaction transaction_FOUR = new Transaction(new BigDecimal("123.87"), customer_BERFIN);
-
-
-		customerRepository.save(customer_ARDA);
-		customerRepository.save(customer_BERFIN);
-
-		transactionRepository.save(transaction_ONE);
-		transactionRepository.save(transaction_TWO);
-		transactionRepository.save(transaction_THREE);
-		transactionRepository.save(transaction_FOUR);
 	}
 }
